@@ -1,18 +1,16 @@
-﻿namespace TestMaximum
+﻿using System;
+
+namespace FindMaxUsingGenerics
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter a Three Numbers to Cheak Maximum Number:");
             MaxIntNumber maxintnum = new MaxIntNumber();
-            Console.WriteLine("Enter a 1st Number : ");
-            int Num1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter a 2nd Number : ");
-            int Num2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter a 3rd Number : ");
-            int Num3 = int.Parse(Console.ReadLine());
-            Console.WriteLine(maxintnum.NumberMax(Num1, Num2, Num3));
+            Console.WriteLine(maxintnum.NumberMax(50, 48, 65));
+            Console.WriteLine("-------------------------");
+            MaxFloatNumber maxfloatnum = new MaxFloatNumber();
+            Console.WriteLine(maxfloatnum.FloatNumber(90.4f, 50.6f, 70.7f));
         }
     }
 }
