@@ -2,18 +2,18 @@
 
 namespace FindMaxUsingGenerics
 {
-    class Program
+    public class Program
     {
+
         public static void Main(string[] args)
         {
-            MaxGeneric<int> maxGenericInt = new MaxGeneric<int>();
-            maxGenericInt.MaxLength(15, 15, 15);
-
-            MaxGeneric<float> maxGenericFloat = new MaxGeneric<float>();
-            maxGenericFloat.MaxLength(45.4f, 85.5f, 94.4f);
-
-            MaxGeneric<string> maxGenericString = new MaxGeneric<string>();
-            maxGenericString.MaxLength("Apple", "Peach", "Banana"); 
+            MaxGeneric<int> intValue = new MaxGeneric<int>(77, 44, 99);
+            intValue.testMaximum();
+            MaxGeneric<float> floatValue = new MaxGeneric<float>(15.33f, 33.44f, 15.55f);
+            floatValue.testMaximum();
+            MaxGeneric<string> strValue = new MaxGeneric<string>("Apple", "Peach", "Banana");
+            strValue.testMaximum();
         }
+
     }
 }
