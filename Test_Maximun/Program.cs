@@ -6,16 +6,14 @@ namespace FindMaxUsingGenerics
     {
         public static void Main(string[] args)
         {
-            MaxIntNumber maxintnum = new MaxIntNumber();
-            Console.WriteLine(maxintnum.NumberMax(50, 48, 65));
-            Console.WriteLine("-------------------------");
+            MaxGeneric<int> maxGenericInt = new MaxGeneric<int>();
+            maxGenericInt.MaxLength(15, 15, 15);
 
-            MaxFloatNumber maxfloatnum = new MaxFloatNumber();
-            Console.WriteLine(maxfloatnum.FloatNumber(90.4f, 50.6f, 70.7f));
-            Console.WriteLine("-------------------------");
+            MaxGeneric<float> maxGenericFloat = new MaxGeneric<float>();
+            maxGenericFloat.MaxLength(45.4f, 85.5f, 94.4f);
 
-            MaxString maxString = new MaxString();
-            Console.WriteLine(maxString.largeString("Apple", "Peach", "Banana"));
+            MaxGeneric<string> maxGenericString = new MaxGeneric<string>();
+            maxGenericString.MaxLength("Apple", "Peach", "Banana"); 
         }
     }
 }
